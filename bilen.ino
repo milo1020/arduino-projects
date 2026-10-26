@@ -124,8 +124,13 @@ float readDistance() {
     return 400.0;
   }
 
+  float distance = duration / 58.0;
+  if (distance <= 0.0 || distance > 400.0) {
+    return 400.0;
+  }
+
   // Distance in cm
-  return duration / 58.0;
+  return distance;
 }
 
 void ask_pin_F() {
